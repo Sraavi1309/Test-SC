@@ -1,0 +1,21 @@
+name: SC
+
+on:
+  workflow_dispatch:
+
+jobs:
+  screenshot-ubuntu:
+    name: Screenshot (Ubuntu)
+    runs-on: [ubuntu-latest]
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Screenshot Website
+      uses: Sraavi1309/screenshot-website@v1.x
+      with:
+        source: https://github.com/Sraavi1309/Screenshot/actions/workflows/screenshot.yml
+        destination: screenshot.png
+        full-page: true
