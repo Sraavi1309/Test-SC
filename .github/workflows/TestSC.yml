@@ -1,0 +1,21 @@
+name: Test SC
+on:
+  workflow_dispatch:
+jobs:
+  screenshot:
+    name: Screenshot
+    runs-on: [ubuntu-latest]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Scripts to be added
+      run: |
+        echo "scripts ran"
+    - name: Screenshot Website
+      uses: Sraavi1309/screenshot-website@v1.x
+      with:
+       source: https://github.com/Sraavi1309/screenshot-website
+       destination: screenshot.png
+       full-page: true
+  
