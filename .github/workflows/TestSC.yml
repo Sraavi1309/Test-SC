@@ -13,7 +13,7 @@ jobs:
       run: |
         echo "scripts ran"
     - name: Screenshot Website
-      uses: Sraavi1309/screenshot-website@v1.x
+      uses: swinton/screenshot-website@v1.x
       with:
        source: https://github.com/Sraavi1309/screenshot-website
        destination: screenshot.png
