@@ -1,4 +1,4 @@
-name: SC
+name: Screenshot
 
 on:
   workflow_dispatch:
@@ -16,6 +16,6 @@ jobs:
     - name: Screenshot Website
       uses: Sraavi1309/screenshot-website@v1.x
       with:
-        source: https://github.com/Sraavi1309/Screenshot/actions/workflows/screenshot.yml
+        source: https://github.com/Sraavi1309/Test-SC/actions/workflows/screenshot.yml
         destination: screenshot.png
         full-page: true
