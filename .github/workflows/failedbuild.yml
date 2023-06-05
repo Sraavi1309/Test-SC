@@ -1,14 +1,17 @@
-name: Failed Build
+name: fail build'
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
+
 jobs:
-  Job1:
-    runs_on: ubuntu-latest
-    steps: 
-    - name: Multi-line single-command Test
-      uses: ./
-      with:
-        timeout_minutes: 1
-        max_attempts: 2
-        run: |
-         echo "hello world"
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - run: echo 'The triggering workflow passed'
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
