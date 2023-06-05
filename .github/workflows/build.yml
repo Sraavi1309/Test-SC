@@ -1,0 +1,13 @@
+name: retry the build
+on: 
+  workflow_dispatch:
+jobs:
+  Retry:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Build after failed
+        uses: ./
+        with:
+          max_attempts: 2
+          run: |
+            echo "hellow world"
