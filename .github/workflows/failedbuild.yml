@@ -1,0 +1,14 @@
+name: Failed Build
+on:
+  workflow_dispatch:
+jobs:
+  Job1:
+    runs_on: ubuntu-latest
+    steps: 
+    - name: Multi-line single-command Test
+      uses: ./
+      with:
+        timeout_minutes: 1
+        max_attempts: 2
+        run: |
+         echo "hello world"
