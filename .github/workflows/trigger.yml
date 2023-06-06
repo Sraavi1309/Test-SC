@@ -7,11 +7,11 @@ jobs:
     
     steps:
       - name: Execute script
-        continue-on-error: false
+        
         run: |
          exit 1
   job2:
-    
+   
     needs: job1
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +19,7 @@ jobs:
        run: |
         echo "I'm done"
   job3:
-    if: failure()
+    if: always()
     needs: [job1, job2]
     runs-on: ubuntu-latest
     steps:
