@@ -1,24 +1,21 @@
 name: fail build'
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: [Build]
-    types: [completed]
 
 jobs:
-  on-success:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    steps:
-      - run: echo 'The triggering workflow passed'
-      - name: Checkout
-        run: |
-          echo "hello world"
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'The triggering workflow failed'
-      - name: Script
-        run: |
-          echo " time is up"
+  runs-on: ubuntu-latest
+  
+  steps:
+   
+   job1:
+    - name: Sample1
+      run: |
+       echo "1 completed"
+   job2:
+      needs: job1
+    - name: Sample2
+      run: |
+       echo "2 completed"
+   job3:
+    if: always()
+    needs: [job1, job2]
