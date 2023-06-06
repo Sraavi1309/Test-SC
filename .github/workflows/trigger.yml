@@ -11,16 +11,16 @@ jobs:
         run: |
          echo "hi"
   job2:
-   
-    needs: job1
+    if: success()
+    needs: [job1]
     runs-on: ubuntu-latest
     steps:
      - name: script to be run
        run: |
         echo "I'm done"
   job3:
-    if: always()
-    needs: [job1, job2]
+    if: failure()
+    needs: [job1]
     runs-on: ubuntu-latest
     steps:
       - name: Re-run
