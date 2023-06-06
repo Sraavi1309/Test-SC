@@ -10,6 +10,7 @@ jobs:
         run: |
          exit 1
   job2:
+    if: failure()
     needs: job1
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +18,6 @@ jobs:
        run: |
         echo "I'm done"
   job3:
-    if: failure()
     needs: [job1, job2]
     runs-on: ubuntu-latest
     steps:
