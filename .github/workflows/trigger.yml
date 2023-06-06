@@ -1,0 +1,26 @@
+name: build
+on: 
+ workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute script
+        continue-on-error: true
+        run: |
+         exit 1
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+     - name: script to be run
+       run: |
+        echo "I'm done"
+  job3:
+    if: always()
+    needs: [job1, job2]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-run
+        run: |
+         echo "re-run job" 
