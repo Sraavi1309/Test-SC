@@ -9,7 +9,7 @@ jobs:
       - name: Execute script
         
         run: |
-         exit 1
+         echo "hi"
   job2:
    
     needs: job1
