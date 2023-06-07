@@ -1,0 +1,18 @@
+name: rebuild
+on:
+  workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: step1
+        run: echo "hi"
+  job2:
+      runs-on: ubuntu-latest
+      steps:
+      - name: check previous build
+        run: |
+          curl -L -X POST  https://api.github.com/repos/Sraavi1309/actions/runs/${{github.run_id}}/rerun -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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 " -H "X-GitHub-Api-Version: 2022-11-28"
