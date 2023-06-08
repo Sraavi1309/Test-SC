@@ -1,6 +1,7 @@
 name: Job2
 on: 
  workflow_dispatch:
+ workflow_call:
 jobs:
   Build:
     runs-on: ubuntu-latest
