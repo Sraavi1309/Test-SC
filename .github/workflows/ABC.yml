@@ -2,25 +2,17 @@ name: ABC
 on: 
  workflow_dispatch:
  workflow_call:
+ workflow_run:
+          workflows: ["Job1"]
+ 
 jobs:
   Build1:
     runs-on: ubuntu-latest 
     steps:
       - name: JOb1
-        run: Sraavi1309/Test-SC/.github/workflows/Job1.yml
-  Build2:
-    if: success()
-    needs: [Build1]
-    runs-on: ubuntu-latest
-    steps:
-     - name: Job2
-       run:  Sraavi1309/Test-SC/.github/workflows/Job2.yml
-  Build3:
-    if: failure()
-    needs: [Build1]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Job3
-        run:  Sraavi1309/Test-SC/.github/workflows/Job3.yml
+        run: |
+         echo "Job1 completed"
+        
+  
           
     
