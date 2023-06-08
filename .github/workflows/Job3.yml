@@ -1,0 +1,10 @@
+name: Job3
+on: 
+ workflow_dispatch:
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Execute job3
+        run: |
+           echo "Execute Job3 if Job1 Fails"
