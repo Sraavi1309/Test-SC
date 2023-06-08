@@ -3,18 +3,21 @@ on:
  workflow_dispatch:
  workflow_call:
  workflow_run:
-          workflows: ["Job1"]
+          workflows: ["Job1", "Job2", "Job3"]
 jobs:
-  on-success:
+  Flow1:
+    if: success()
+    needs: ["Job2"]
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo 'The triggering workflow passed'
-  on-failure:
+      - name: Rerun
+        run: echo "hi"
+  Flow2:
+    if: success()
+    needs: ["Job3"]
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - run: echo 'The triggering workflow failed'
-  
+      - name: Rerun
+        run: echo "hi"
           
     
