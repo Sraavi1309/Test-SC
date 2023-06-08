@@ -7,14 +7,14 @@ on:
 jobs:
   Flow1:
     if: success()
-    needs: ["Job2"]
+    needs: ["Job1"]
     runs-on: ubuntu-latest
     steps:
       - name: Rerun
         run: echo "hi"
   Flow2:
     if: success()
-    needs: ["Job3"]
+    needs: ["Job1"]
     runs-on: ubuntu-latest
     steps:
       - name: Rerun
