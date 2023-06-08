@@ -2,12 +2,9 @@ name: Job2
 on: 
  workflow_dispatch:
 jobs:
-  job2:
+  Build:
     runs-on: ubuntu-latest
-    needs: Sraavi1309/Test-SC/.github/workflows/Job1.yml
-    steps:
-         
-         
+    steps: 
       - name: Execute job2
         run: |
-           echo "job2 completed"
+           echo "Execute Job2 if Job1 is success"
