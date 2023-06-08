@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: JOb1
         run: |
-          Sraavi1309Test-SC/.github/workflows/Job1.yml
+          echo Sraavi1309Test-SC/.github/workflows/Job1.yml
   Build2:
     if: success()
     needs: [Build1]
@@ -16,7 +16,7 @@ jobs:
     steps:
      - name: Job2
        run: |
-         Sraavi1309Test-SC/.github/workflows/Job2.yml
+         echo Sraavi1309Test-SC/.github/workflows/Job2.yml
   Build3:
     if: failure()
     needs: [Build1]
@@ -24,6 +24,6 @@ jobs:
     steps:
       - name: Job3
         run: |
-         Sraavi1309Test-SC/.github/workflows/Job3.yml
+         echo Sraavi1309Test-SC/.github/workflows/Job3.yml
           
     
