@@ -1,4 +1,15 @@
 Install-Module Microsoft.Online.SharePoint.PowerShell -force
+#Import PowerShell module for SharePoint Online
+Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
+ 
+#Connect to SharePoint Online
+Connect-SPOService -url "https://infosystechnologies-my.sharepoint.com/:x:/r/personal/chakkiralapadma_s_ad_infosys_com/_layouts/15/doc2.aspx?sourcedoc=%7BB6CBB6CC-B2B8-4BE1-A2DA-775839001120%7D&file=Book.xlsx&action=editnew&mobileredirect=true&wdNewAndOpenCt=1687438947550&ct=1687438947550&wdPreviousSession=85339189-5609-4d36-a0a8-e1d837856185&wdOrigin=OFFICECOM-WEB.MAIN.NEW" -Credential (Get-Credential)
+ 
+#Get All SharePoint Sites
+Get-SPOSite
+
+
+#Read more: https://www.sharepointdiary.com/2018/12/install-update-uninstall-sharepoint-online-powershell-module.html#ixzz85N8y2WiY
 $baseUrl = "https://api.github.com"
 $owner = "Sraavi1309"
 $repo = "Test-SC"
