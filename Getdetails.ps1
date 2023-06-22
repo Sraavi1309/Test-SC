@@ -1,4 +1,5 @@
-﻿$baseUrl = "https://api.github.com"
+Install-Module Microsoft.Online.SharePoint.PowerShell
+$baseUrl = "https://api.github.com"
 $owner = "Sraavi1309"
 $repo = "Test-SC"
 $exportFilePath = "C:\Users\chakkiralapadma.s\Documents\AEP\Results.csv"
