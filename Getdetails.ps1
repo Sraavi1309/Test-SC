@@ -3,7 +3,7 @@ $baseUrl = "https://api.github.com"
 $owner = "Sraavi1309"
 $repo = "Test-SC"
 $exportFilePath = "C:\Users\chakkiralapadma.s\Documents\AEP\Results.csv"
-$token = "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"
+$token = "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"
 
 $headers = @{
     "Authorization" = "Bearer $token"
