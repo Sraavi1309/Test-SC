@@ -2,7 +2,7 @@ Install-Module Microsoft.Online.SharePoint.PowerShell -force
 $baseUrl = "https://api.github.com"
 $owner = "Sraavi1309"
 $repo = "Test-SC"
-$exportFilePath = "C:\Users\chakkiralapadma.s\Documents\AEP\Results.csv"
+$exportFilePath = "https://github.com/Sraavi1309/Test-SC/Results.csv"
 $token = "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"
 
 $headers = @{
