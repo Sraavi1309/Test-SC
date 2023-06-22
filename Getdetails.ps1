@@ -3,7 +3,7 @@ Install-Module Microsoft.Online.SharePoint.PowerShell -force
 Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
  
 #Connect to SharePoint Online
-Connect-SPOService -url "https://www.microsoft.com/en-in/microsoft-365/sharepoint/collaboration" -Credential 
+Connect-SPOService -url "https://www.microsoft.com/en-in/microsoft-365/sharepoint/collaboration" -Credential (Get-Credential)
  
 #Get All SharePoint Sites
 Get-SPOSite
