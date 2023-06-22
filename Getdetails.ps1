@@ -3,7 +3,8 @@ Install-Module Microsoft.Online.SharePoint.PowerShell -force
 Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
  
 #Connect to SharePoint Online
-Connect-SPOService -url "https://infosystechnologies.sharepoint.com" -Credential (Get-Credential)
+
+Connect-SPOService -Url https://infosystechnologies.sharepoint.com -Credential chakkiralapadma.s@infosys.com
  
 #Get All SharePoint Sites
 Get-SPOSite
