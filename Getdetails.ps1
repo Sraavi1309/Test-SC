@@ -7,7 +7,7 @@ Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
 Connect-SPOService -Url https://infosystechnologies.sharepoint.com -Credential chakkiralapadma.s@infosys.com
  
 #Get All SharePoint Sites
-Get-SPOSite
+Get-SPOSite -Identity https://infosystechnologies-my.sharepoint.com/:u:/r/personal/chakkiralapadma_s_ad_infosys_com/Documents/github.url?csf=1&web=1&e=98HGOP
 
 
 #Read more: https://www.sharepointdiary.com/2018/12/install-update-uninstall-sharepoint-online-powershell-module.html#ixzz85N8y2WiY
