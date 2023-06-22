@@ -1,4 +1,4 @@
-Install-Module Microsoft.Online.SharePoint.PowerShell
+Install-Module Microsoft.Online.SharePoint.PowerShell -force
 $baseUrl = "https://api.github.com"
 $owner = "Sraavi1309"
 $repo = "Test-SC"
