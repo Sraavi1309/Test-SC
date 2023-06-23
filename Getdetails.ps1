@@ -1,8 +1,8 @@
 Install-Module SharePointPnPPowerShellOnline -Force
 #Import PowerShell module for SharePoint Online
 #Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
-$credentials = Get-Credential -Message “Please Enter SharePoint Online credentials” 
-$Site=”https://infosystechnologies.sharepoint.com/”
+$credentials = "chakkiralapadma.s@infosys.com"
+$Site= ”https://infosystechnologies.sharepoint.com/” 
 Connect-PnPOnline -Url $Site -Credentials $credentials
 $CustomerData = Import-CSV “C:\Users\chakkiralapadma.s\Documents\AEP\Results.csv”
 
