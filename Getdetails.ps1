@@ -1,11 +1,11 @@
-Install-Module SharePointPnPPowerShellOnline-AllowClobber -SkipPublisherCheck -Force
+Install-Module SharePointPnPPowerShellOnline -Force
 #Import PowerShell module for SharePoint Online
 #Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
- 
-#Connect to SharePoint Online
+$credentials = Get-Credential -Message “Please Enter SharePoint Online credentials” 
+$Site=”https://infosystechnologies.sharepoint.com/”
+Connect-PnPOnline -Url $Site -Credentials $credentials
+$CustomerData = Import-CSV “C:\Users\chakkiralapadma.s\Documents\AEP\Results.csv”
 
-Connect-PnPOnline -Url "https://infosystechnologies.sharepoint.com" -UseWebLogin
-Get-PnP
  
 #Get All SharePoint Sites
 #Get-SPOSite -Identity https://infosystechnologies-my.sharepoint.com/:u:/r/personal/chakkiralapadma_s_ad_infosys_com/Documents/github.url?csf=1&web=1&e=98HGOP
