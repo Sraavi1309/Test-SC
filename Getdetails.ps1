@@ -15,7 +15,7 @@ $CustomerData = Import-CSV “C:\Users\chakkiralapadma.s\Documents\AEP\Results.c
 $baseUrl = "https://api.github.com"
 $owner = "Sraavi1309"
 $repo = "Test-SC"
-$exportFilePath = "https://github.com/Sraavi1309/Test-SC/Results.csv"
+$exportFilePath = "https://infosystechnologies-my.sharepoint.com/:u:/g/personal/chakkiralapadma_s_ad_infosys_com/EZjDBUptQmlDqslCNerIiHsBjWsZXRX-gfVyehorNAb8Ag?e=cQNKox"
 $token = "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"
 
 $headers = @{
